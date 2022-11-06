@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question-5</title>
+</head>
+<body>
+    <h3>a:</h3>
+    <p id="spl"></p>
+    <p id="spl1"></p>
+    <p id="spl2"></p>
+    <p id="spl3"></p>
+    <h3>b:</h3>
+    <p id="join"></p>
+    <p id="join1"></p>
+    <p id="join2"></p>
+    <p id="join3"></p>
+    <h3>c:</h3>
+    <p id="agd">no it doesn't change the original string and array</p>
+    <h3>d:</h3>
+    <p id="spl4"> </p>
+    <p id="join4"></p>
+
+    <script>
+       let str = 'In space, no one can hear you code.';
+        document.getElementById("spl").innerHTML=str.split();
+        document.getElementById("spl1").innerHTML=str.split('e');
+        document.getElementById("spl2").innerHTML=str.split(' ');
+        document.getElementById("spl3").innerHTML=str.split('');
+        let arr = ['B', 'n', 'n', 5]
+        document.getElementById("join").innerHTML=arr.join();
+        document.getElementById("join1").innerHTML=arr.join('a');
+        document.getElementById("join2").innerHTML=arr.join(' ');
+        document.getElementById("join3").innerHTML=arr.join('');
+        let array=["benefit", "cadet"];
+        let str1="water,space suits,food,plasma sword,batteries";
+        document.getElementById("spl4").innerHTML=str1.split();// convert to array
+       document.getElementById("join4").innerHTML=array.join() + str1.split().join();//join the array and converted array
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question-2</title>
+</head>
+
+<body>
+    <h3>a:</h3>
+    <p id="add"></p>
+    <h3>b:</h3>
+    <p id="pop"></p>
+    <p id="popprint"> </p>
+    <h3>c:</h3>
+    <p id="firremove"></p>
+    <p id="afterremove"></p>
+    <h3>d:</h3>
+    <p id="not"> </p>
+    <h3>e:</h3>
+    <p id="itr">
+        <p id="length"></p>
+    </p>
+    <script>
+        "use script";
+        let cargoHold = ["oxygen tanks", "space suits", "parrot", "instruction manual", "meal packs", "slinky", "security blanket"];
+        cargoHold[5] = "space tether";
+        document.getElementById("add").innerHTML = cargoHold;
+        let remove = cargoHold.pop();
+        document.getElementById("pop").innerHTML = remove;
+        document.getElementById("popprint").innerHTML = cargoHold;
+        let first = cargoHold.shift();
+        document.getElementById("firremove").innerHTML = first;
+        document.getElementById("afterremove").innerHTML = cargoHold;
+        cargoHold[0] = 1138;
+        cargoHold[cargoHold.length - 1] = "20 meters";
+        document.getElementById("not").innerHTML = cargoHold;
+        let len=cargoHold.length;
+        document.getElementById("length").innerHTML = len;
+        let str="<ul>";
+        for(let i=0;i<len;i++){
+          str+="<li>"+ cargoHold[i] +"<br>";
+        }
+        str+="<ul>";
+        document.getElementById("itr").innerHTML = str;
+ 
+    </script>
+</body>
+
+</html>

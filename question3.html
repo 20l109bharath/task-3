@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question-3</title>
+</head>
+<body>
+    <h3>a:</h3>
+    <p id="sp"></p>
+    <h3>b:</h3>
+    <p id="sp1"></p>
+    <h3>c:</h3>
+    <p id="sp2"></p>
+    <script>
+        let cargoHold = ["1138","parrot","instruction manual","meal packs","20 meteres"];
+        cargoHold.splice(3,1,"keys");
+        document.getElementById("sp").innerHTML=cargoHold;
+        let remove=cargoHold.indexOf("instruction manual");
+        cargoHold.splice(remove,1);
+        document.getElementById("sp1").innerHTML=cargoHold;
+        cargoHold.splice(2,4,"cat","fob","string cheese");
+        document.getElementById("sp2").innerHTML=cargoHold;
+    </script>
+</body>
+</html>

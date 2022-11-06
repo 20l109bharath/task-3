@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question-4</title>
+</head>
+<body>
+    <h3>a:</h3>
+    <p id="con"></p>
+    <p id="comp"></p>
+    <p>no it does not change the original array</p>
+    <h3>b:</h3>
+    <p id="con1"></p>
+    <p id="comp1"></p>
+    <p>no it does not change the original array</p>
+    <h3>c:</h3>
+    <p id="rev"></p>
+    <p id="sort"></p>
+    <p>yes it  change the original array</p>
+    <script>
+       let holdCabinet1= ["duct tape", "gum", 3.14, false, 6.022e23];
+       let holdCabinet2= ["orange drink", "nerf toys", "camera", 42, "parsnip"];
+        let result=holdCabinet1.concat(holdCabinet2);
+        document.getElementById("con").innerHTML=result;
+        document.getElementById("comp").innerHTML=holdCabinet1;//no it does not change the original array
+
+        let n1=holdCabinet1.slice(0,2);
+        document.getElementById("con1").innerHTML=n1;
+        let n2=holdCabinet2.slice(0,2);
+        document.getElementById("comp1").innerHTML=n2;//no it does not change the original array
+        let rev=holdCabinet1.reverse();
+        let sot=holdCabinet2.sort();
+        document.getElementById("rev").innerHTML=rev;
+        document.getElementById("sort").innerHTML=sot;//yes it  change the original array
+    </script>
+</body>
+</html>
